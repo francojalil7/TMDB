@@ -1,0 +1,4 @@
+.footer {
+  position: -webkit-fixed; /* Safari */
+  bottom: 0;
+}
