@@ -27,7 +27,7 @@ const CardResult = ({ result }: Props) => {
       <Stack m="1rem" p="1rem">
         <Text fontWeight={"bold"}>{result.title}</Text>
         <Text>{result.release_date?.substring(0, 4)}</Text>
-        <Text>{`${result.overview?.slice(0, 100)}...`}</Text>
+        <Text>{`${result.overview?.slice(0, 88)}...`}</Text>
       </Stack>
     </Stack>
   );
