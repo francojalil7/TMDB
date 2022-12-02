@@ -5,7 +5,6 @@ interface Props {
   result: Result;
 }
 const CardResult = ({ result }: Props) => {
- 
   return (
     <Stack
       h="330px"
@@ -13,12 +12,16 @@ const CardResult = ({ result }: Props) => {
       flexDir={"row"}
       borderRadius={"15px"}
       boxShadow="2xl"
-      justifyContent={"center"}
+      justifyContent={"flex-start"}
       p={3}
     >
       <Image
         borderRadius={"10px"}
-        src={`https://image.tmdb.org/t/p/original${result.poster_path}`}
+        src={
+          result.poster_path
+            ? `https://image.tmdb.org/t/p/original${result.poster_path}`
+            : "https://www.shutterstock.com/image-vector/image-not-found-grayscale-photo-260nw-1737334631.jpg"
+        }
         maxHeight={"25vh"}
         my="auto"
         mx="1rem"
@@ -26,7 +29,7 @@ const CardResult = ({ result }: Props) => {
       <Divider orientation="vertical" m="1rem" />
       <Stack m="1rem" p="1rem">
         <Text fontWeight={"bold"}>{result.title}</Text>
-        <Text>{result.release_date?.substring(0, 4)}</Text>
+        <Text>{result.release_date?.substring(0, 4) || "Sin título"}</Text>
         <Text>{`${result.overview?.slice(0, 88)}...`}</Text>
       </Stack>
     </Stack>
