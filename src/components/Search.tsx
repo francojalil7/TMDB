@@ -63,7 +63,7 @@ const Search = ({ movies }: Props) => {
       </Text>
       <InputGroup
         size="md"
-        maxWidth={"300px"}
+        maxWidth={"700px"}
         bgColor="white"
         color={"white"}
         borderRadius="50px"

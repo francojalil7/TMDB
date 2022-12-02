@@ -13,7 +13,7 @@ const Slider = ({ movies }: Props) => {
         display="flex"
         curson="grab"
         drag="x"
-        dragConstraints={{ right: 0, left: -1600 }}
+        dragConstraints={{ right: 0, left: -1350 }}
       >
         {movies.map((movie) => (
           <CardSlider key={movie.title} movie={movie}/>

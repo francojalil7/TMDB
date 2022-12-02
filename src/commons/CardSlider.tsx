@@ -10,7 +10,7 @@ const CardSlider = ({ movie }: Props) => {
 
   return (
     <motion.div className="slider">
-      <img src={`https://image.tmdb.org/t/p/w500${movie?.poster_path}`}/>
+      <motion.img src={`https://image.tmdb.org/t/p/w500${movie?.poster_path}`}/>
       <h2>{movie?.title.slice(0, 13)}</h2>
       <p>{movie?.release_date.substring(0,4)}</p>
     </motion.div>
